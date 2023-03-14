@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { Hero } from '../hero';
 import { HEROES } from '../mock-heroes';
 
-
 @Component({
   selector: 'app-heroes',
   templateUrl: './heroes.component.html',
@@ -11,9 +10,11 @@ import { HEROES } from '../mock-heroes';
 export class HeroesComponent {
 
   heroes = HEROES;
-  selectedHero?: Hero;
+
+  selectedHero!: Hero;
 
   onSelect(hero: Hero): void {
-  this.selectedHero = hero;
+    this.selectedHero = hero;
   }
 }
+
